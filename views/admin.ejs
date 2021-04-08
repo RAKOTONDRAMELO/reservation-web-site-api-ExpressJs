@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<%- include ('head') %>
+<body data-spy="scroll" data-target=".navbar" data-offset="80" >
+    <%- include ('menuadmin') %>
+    <%- include ('boutonDeconnecter') %>
+    <%- include ('inscrption') %>
+    </div>
+    </div>
+    </div>
+    <%- include ('reservation') %>
+    <div class="container">
+        <div class="<%= locals.index.alerte %>" style="margin-top: 80px;text-align: center;">
+            <h2>
+               <%= locals.index.message %>
+            </h2>    
+        </div>
+        <div name="liste" style="background-color: brown;color: rgb(252, 249, 249);"> 
+            <%- include ('listeReservation') %>
+        </div>
+        <div name="liste" style="background-color: brown;color: rgb(252, 249, 249);display: none;"> 
+            <%- include ('listeUtilisateurs') %>
+        </div>
+            
+        <%- include ('calendrier') %>  
+    </div>    
+           
+    <%- include ('footer',{visiteur:locals.utilisateur.nom+" "+locals.utilisateur.prenom}) %>    
+    <script src="js/calendrier.js"></script> 
+    </body>
+</html>

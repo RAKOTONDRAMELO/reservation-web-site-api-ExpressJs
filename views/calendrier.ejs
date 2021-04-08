@@ -1,0 +1,71 @@
+<div id="calendrier" class="row">	
+	<div class="col-sm-5">
+		<h1>CALENDRIER</h1>
+		<p>
+			<h3>
+				<button style="background-color: red;width: 50px;height: 50px;" disabled></button> 
+				: Date indisponible pour une nouvelle réservation
+			</h3>
+		</p>
+		<p>
+			<h3>
+				<button style="background-color: white;width: 50px;height: 50px;" disabled></button>
+				: Date d'aujourd'hui
+			</h3>
+		</p>
+		<p>
+			<h3>
+				<button style="background-color:black;width: 50px;height: 50px;" disabled></button> 
+				: Date disponible pour une nouvelle réservation
+			</h3>
+		</p>
+		<h4 style="font-style:italic ;">
+			Vous pouvez cliquez sur les dates disponibles pour réserver si vous êtes déjà connectés
+			sinon veuillez vous connecter pour réserver. 
+		</h4>
+	</div>
+	<div class="col-sm-7">
+		<table style="width: 100%;">	
+			<tr style="background:rgb(175, 22, 22)"> 
+				<td class="col-xs-2"><button  id="prev" style="display:none" class="col-xs-12" onclick="moisPrecedent()" ><span class="glyphicon glyphicon-arrow-left"></span></button></td>
+				<td id="mois" style="text-align:center;color:white;font-size:50px;"></td>
+				<td class="col-xs-2"><button id="next" class="col-xs-12" style="display:in-line-block;background:white;border:5px black solid" onclick="moisSuivant()"><span class="glyphicon glyphicon-arrow-right"></span></button></td>
+			</tr>
+			<tr style="background:blue">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Dim</td>
+				<td id='0'></td>
+				<td class="col-xs-2"></td>
+			</tr>
+			<tr style="background:rgb(175, 22, 22)">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Lun</td>
+				<td id='1'>	</td>
+				<td class="col-xs-2"></td>
+			</tr>
+			<tr style="background:rgb(175, 22, 22)">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Mar</td>
+				<td id='2'></td>
+				<td class="col-xs-2"></td>
+			</tr>
+			<tr style="background:rgb(175, 22, 22)">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Mer</td>
+				<td id='3'></td>
+				<td class="col-xs-2"></td>
+			</tr>
+			<tr style="background:rgb(175, 22, 22)">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Jeu</td>
+				<td id='4'></td>
+				<td class="col-xs-2"></td>
+			</tr>
+			<tr style="background:rgb(175, 22, 22)">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Ven</td>
+				<td id='5'></td>
+				<td class="col-xs-2"></td>
+			</tr>
+			<tr style="background:blue">
+				<td style="color:white;text-align:center;font-size:30px" class="col-xs-2">Sam</td>
+				<td id='6'></td>
+				<td class="col-xs-2"></td>
+			</tr>	
+		</table>
+	</div>
+</div>

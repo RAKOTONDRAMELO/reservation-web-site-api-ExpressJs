@@ -1,0 +1,21 @@
+<h2 style="border-bottom: 5px black solid;color: black;">
+    <ul class="container">
+        <ol class="col-sm-4" style="text-align: center;">Nom</ol>
+        <ol class="col-sm-4" style="text-align: center;">Prénom</ol>
+        <ol class="col-sm-4" style="text-align: center;">C.I.N</ol>
+    </ul>
+</h2>
+<% for (var user of locals.users) { %> 
+    <h2 style="border-bottom: 5px black solid;color: white;">
+        <ul class="container">
+            <ol class="col-sm-4" style="text-align: center;"><%= user.nom %></ol>
+            <ol class="col-sm-4" style="text-align: center;"><%= user.prenom %></ol>
+            <ol class="col-sm-4" style="text-align: center;"><%= user.cinClient %></ol>
+        </ul>
+        <%- include ('modalsUser',{user:user}) %>
+        <button class="btn col-xs-12" style="background-color: black;color: red;" data-toggle="modal" data-target="#<%= user.cinClient %> ">
+            Détails
+        </button>
+    </h2>
+    
+<% } %>

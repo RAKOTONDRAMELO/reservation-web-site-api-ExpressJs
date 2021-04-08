@@ -1,0 +1,21 @@
+<h2 style="border-bottom: 5px black solid;color: black;">
+    <ul class="container">
+        <ol class="col-sm-4" style="text-align: center;">Dates</ol>
+        <ol class="col-sm-4" style="text-align: center;">Clients</ol>
+        <ol class="col-sm-4" style="text-align: center;">Responsables</ol>
+    </ul>
+</h2>
+<% for (var reservation of locals.reservation) { %> 
+    <h2 style="border-bottom: 5px black solid;color: white;">
+        <ul class="container">
+            <ol class="col-sm-4" style="text-align: center;" name="reserver"><%= moment(reservation.date).locale('fr-ca').format('L') %></ol>
+            <ol class="col-sm-4" style="text-align: center;"><%= reservation.cinClient %></ol>
+            <ol class="col-sm-4" style="text-align: center;"><%= reservation.cinAdmin %></ol>
+        </ul>
+        <%- include ('modalsAdmin') %>
+        <button class="btn col-xs-12" style="background-color: black;color: red;" data-toggle="modal" data-target="#M<%= moment(reservation.date).locale('fr-ca').format('L') %> ">
+            Détails
+        </button>
+    </h2>
+    
+<% } %>

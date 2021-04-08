@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<%- include ('head') %>
+<body data-spy="scroll" data-target=".navbar" data-offset="80" >
+    <%- include ('menu') %>
+    <%- include ('menuplus') %>
+    <li><a href="#contact" >Contact</a></li>
+</ul>
+    <%- include ('boutonDeconnecter') %>
+    <div class="container">    
+        <%- include ('reservation') %>
+    </div>
+    <div class="container">
+        <div class="alert alert-success" style="margin-top: 80px;text-align: center;">
+            <h2>
+               Soyez le bienvenue chers clients ♥♥♥
+            </h2>
+        </div>
+        <%- include ('accueil.ejs') %>
+    </div> 
+
+    <% for (var reservation of locals.reservation) { %> 
+        <div class="col-sm-4" style="text-align: center;display: none;" name="reserver"><%= moment(reservation.date).locale('fr-ca').format('L') %></div>
+    <% } %>
+    
+    <%- include ('footer',{visiteur:locals.utilisateur.nom+" "+locals.utilisateur.prenom}) %>    
+    <script src="js/calendrier.js"></script> 
+    </body>
+</html>

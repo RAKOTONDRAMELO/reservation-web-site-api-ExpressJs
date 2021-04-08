@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HIFAMPINTATSOA</title>
+        <link rel="icon" type="image/x-icon" href="image/hifampitantsoa/modif/couverture.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> 
+    </head>
+    <body class="container">
+        <fieldset class="col-sm-6 col-sm-push-3">
+            <h2>
+                <legend style="text-align: center;">Facture</legend>
+                <form class="form" action="/confirmation" method="post">
+                    <% if (locals.users.user == 0) var read = "readonly" %>
+                    <div>
+                        <div class="form-group col-sm-6">
+                            <label for="nom">Nom</label>
+                            <input type="text" value= "<%=locals.users.nom %>"  name="nom"  class="form-control input-lg"  <%= read %>/>                
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" value= "<%=locals.users.prenom %>"  name="prenom"  class="form-control input-lg"  <%= read %>/>                
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group col-sm-6">
+                            <label for="cin">C.I.N</label>
+                            <% if (locals.users.user == 0) {var cin = locals.users.cinClient} else cin = locals.reservation.cin %>
+                            <input type="text" value= "<%=cin %>"  name="cin"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" value= "<%=locals.users.adresse %>"  name="adresse"  class="form-control input-lg"  <%= read %>/>                
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group col-sm-6">
+                            <label for="color">Code couleur</label>
+                            <input type="color" value= "<%=locals.retour.color %>"  name="color"  class="form-control input-lg"  />                
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="date">Date à réserver</label>
+                            <input type="date" value= "<%=locals.reservation.date %>"  name="date"  class="form-control input-lg"  readonly/>                
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group col-sm-6">
+                            <label for="effectif">Effectif</label>
+                            <input type="number" value= "<%=locals.reservation.effectif %>"  name="effectif"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="prix">Prix (Ar)</label>
+                            <input type="number" value= "<%=locals.prix %>"  name="prix"  class="form-control input-lg"  readonly/>                
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label for="pass">Mot de passe</label> 
+                        <input type="password" id="mdp"  name="pass" class="form-control input-lg" required/>
+                    </div>
+                    <div class="<%=locals.retour.alert%>" role="alert">
+                        <h2><%=locals.retour.message%></h2>
+                    </div>
+                    <div>
+                        <div class="form-group col-sm-6">
+                            <input type="submit" value="Confirmer" style ="font-size: x-large;" class="form-control input-lg btn btn-info" />
+                        </div>                     
+                    </div>
+                </form>
+                <form action="/retour" method="POST">
+                    <div class="form-group col-sm-6">
+                        <input type="submit" value="Retour" style ="font-size: x-large" class=" form-control input-lg btn btn-danger " />              
+                    </div>
+                </form>  
+            </h2>
+        </fieldset>
+    </body>
+</html>

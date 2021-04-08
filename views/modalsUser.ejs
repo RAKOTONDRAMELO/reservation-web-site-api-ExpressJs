@@ -1,0 +1,59 @@
+
+<div id="<%= user.cinClient %>"  data-backdrop="false" class="modal fade" style="background-color:black;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Cochin, Georgia, Times, 'Times New Roman', sans-serif">
+    <div class="modal-dialog " >
+        <div class="modal-content " style="background-color:brown;">
+            <form class="form" method="POST" >
+                <div class="modal-header">
+                    <button type="button" class="close" name="<%= user.cinClient %>" data-dismiss="modal" onclick="arretModif(this.name)">x</button>
+                    <h3>Compte utilisateur</h3>
+                </div>
+                <div class="modal-body"> 
+                        <div class="form-group ">
+                            <label for="cinClient">C.I.N</label>
+                            <input type="text" value= "<%=user.cinClient %>"  name="cinClient"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group ">
+                            <label for="nom">Nom</label>
+                            <input type="text" value= "<%=user.nom %>"  name="nom"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group ">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" value= "<%=user.prenom %>" name="prenom"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group ">
+                            <label for="Adresse">Adresse</label>
+                            <input type="text" value= "<%=user.adresse %>"  name="Adresse"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group ">
+                            <label for="numero">numero</label>
+                            <input type="text" value= "<%=user.numero %>"  name="numero"  class="form-control input-lg"  readonly/>                
+                        </div>
+                        <div class="form-group ">
+                            <label for="compte">Type compte</label>
+                            <% if (user.user == 0) {var conf = "Client"} else {var conf = "Admin"} %>
+                            <input type="text" value= "<%=conf %>"  name="compte"  class="form-control input-lg"  disabled/>                
+                        </div>
+                    <div class="form-group ">
+                        <label for="pass">Mot de passe</label> 
+                        <input type="password"  name="pass" class="form-control input-lg" required/>
+                    </div>
+                </div>
+
+                <div class="modal-footer" >
+                    <button class="btn btn-primary col-xs-3" name="<%= user.cinClient %>" onclick="modifier(this.name)" type="button">
+                        MODIFIER
+                    </button>
+                    <button class="btn btn-success col-xs-3" type="submit" formaction="/changer">
+                        CONFIRMER
+                    </button>
+                    <button class="btn btn-info col-xs-3" type="submit" formaction="/delete">
+                        SUPPRIMER
+                    </button>
+                    <button class="btn btn-danger col-xs-2" formaction="/certifier" type="submit">
+                        CERTIFIER
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>    

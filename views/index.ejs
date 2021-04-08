@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<%- include ('head') %>
+<body data-spy="scroll" data-target=".navbar" data-offset="80" >
+    <%- include ('menu') %>
+    <li><a href="#contact" >Contact</a></li>
+</ul>
+    <%- include ('boutonConnecter') %>
+    <div class="container">    
+        <%- include ('connexion') %>
+        <%- include ('inscrption') %>
+        <%- include ('modalSeConnecter') %>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="<%=locals.index.alerte %>" style="margin-top: 80px;text-align: center;">
+            <h2><%=locals.index.message%></h2>
+        </div>
+        <%- include ('accueil.ejs') %>
+    </div> 
+
+    <% for (var reservation of locals.reservation) { %> 
+        <div class="col-sm-4" style="text-align: center;display: none;" name="reserver"><%= moment(reservation.date).locale('fr-ca').format('L') %></div>
+    <% } %>
+
+    <%- include ('footer',{visiteur:"Visiteurs"}) %>    
+    <script src="js/calendrier.js"></script>
+    
+</body>
+</html>

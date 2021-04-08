@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default navbar-fixed-top " >
+    <div class="container" >
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse " id="myNavbar" >
+            <ul class="nav navbar-nav navbar-left col-sm-10">
+                <li class="col-sm-6" style="padding: 0px 0px 0px 0px;">
+                    <a>
+                        <div class="input-group input-group-md " >
+                            <input type="text" name="recherche" class="form-control" placeholder="Rechercher la date ... (ex:2020-02-15)" id="recherche">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" onclick="rechercher(this)" data-toggle="modal" data-target=""  type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                       Rechercher 
+                                </button>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-sm-3" style="padding: 5px 0px 0px 0px;">
+                    <a href="#" onclick="liste()" id="Bouttonliste">
+                        Liste des utilisateurs 
+                    </a>
+                </li>
+                <li class="col-sm-3" style="padding: 5px 0px 0px 0px;">
+                    <a href="#" data-toggle="modal" data-target="#inscription">
+                        Ajouter un nouveau admin
+                    </a>
+                </li>
+            </ul>
+                
+            
+                

@@ -1,0 +1,118 @@
+body{
+    font-family: Haettenschweiler;
+}
+footer{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(175, 22, 22); 
+}
+h1 {
+    color:rgb(175, 22, 22);
+    font-size: 70px;
+    font-style: italic;
+    text-align: center;
+}
+.row {
+    padding-top: 75px;
+}
+.col-sm-8 {
+    background: rgb(175, 22, 22);
+    padding: 20px;
+}
+.col-sm-7{
+    background: rgb(175, 22, 22);
+    padding: 20px;
+}
+a{
+    color: rgb(41, 175, 216);
+}
+
+/*menu*/
+.navbar-default{
+    background:black;
+    opacity:0.85;
+    font-size: 24px;
+    
+}
+
+#myNavbar li > a{
+    color:red;
+
+}
+
+/* society */
+#society{
+    background:  rgb(175, 22, 22);
+}
+#society div{
+    background-color: rgb(175, 22, 22);
+    text-align: center;
+    height: 100px;
+}
+#society img{
+    width:80%;
+    height: 100px;
+}
+#society h1{
+    color: white;
+}
+#tirette{
+    width:100%;
+    height: 20px;
+    background: rgb(175, 22, 22);
+    opacity: 0.85;
+    border: none;
+    color: white;
+}
+
+/* a propos */
+#about p{
+    padding: 0px 20px 20px 20px;
+    text-align: justify;
+    color: white
+
+}
+#about h1{
+    padding-top: 40px;
+}
+
+/*aperçu*/
+#aperçu h1{
+    padding-top: 200px;
+}
+
+/* calendrier */
+#calendrier h1{
+    padding-top: 20px;
+} 
+
+/*contact*/
+#contact{
+    color: rgb(175, 22, 22);
+    text-align: center;
+}
+.alert-danger{
+    background-color: black;
+    color:  rgb(175, 22, 22);
+}
+.alert-success{
+    background-color: rgb(175, 22, 22);
+    color:  white;
+}
+@media (max-width:768px){
+    #about h1 {
+        padding-top: 0px;
+    }
+    #aperçu h1 {
+        padding-top: 0px;
+    }
+    #calendrier h1 {
+        padding-top: 0px;
+    }
+    footer {
+        text-align: center;
+    }
+    .row {
+        padding-top: 40px;
+    }
+}
